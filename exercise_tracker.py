@@ -10,17 +10,24 @@ except FileNotFoundError:
     df = pd.DataFrame(columns=["Date", "Category", "Exercise", "Sets", "Reps", "Weight", "Notes"])
 
 st.set_page_config(page_title="Exercise Tracker", layout="centered")
+
 st.markdown("""
     <style>
         .main-title {
             text-align: center;
-            font-size: clamp(1.2rem, 4vw, 2.5rem);
-            font-weight: bold;
+            font-size: 1.8rem;
+            font-weight: 600;
             margin-bottom: 1rem;
+        }
+        @media screen and (max-width: 480px) {
+            .main-title {
+                font-size: 1.4rem;
+            }
         }
     </style>
     <h1 class='main-title'>🏋️ Exercise Tracker & Logger</h1>
 """, unsafe_allow_html=True)
+
 
 
 
@@ -49,6 +56,7 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
 
 
 
