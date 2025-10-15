@@ -11,17 +11,11 @@ except FileNotFoundError:
 
 st.set_page_config(page_title="Exercise Tracker", layout="centered")
 
-st.markdown("""
-    <style>
-        .main-title {
-            text-align: center;
-            font-size: 5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-    </style>
-    <h1 class='main-title'>🏋️ Exercise Tracker & Logger</h1>
-""", unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns([1, 6, 1])
+with col2:
+    st.markdown("### 🏋️ Exercise Tracker & Logger")
+
 
 
 
@@ -53,6 +47,7 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
 
 
 
