@@ -10,7 +10,7 @@ except FileNotFoundError:
     df = pd.DataFrame(columns=["Date", "Category", "Exercise", "Sets", "Reps", "Weight", "Notes"])
 
 st.set_page_config(page_title="Exercise Tracker", layout="centered")
-st.title("🏋️ Exercise Tracker & Logger")
+st.markdown("<h1 style='text-align: center; font-size: 2.2em;'>🏋️ Exercise Tracker & Logger</h1>", unsafe_allow_html=True)
 
 categories = ["Strength", "Cardio", "Mobility", "CrossFit"]
 category = st.selectbox("Select Exercise Category", categories)
@@ -37,3 +37,4 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
