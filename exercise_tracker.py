@@ -15,7 +15,7 @@ st.markdown("""
     <style>
         .main-title {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
@@ -56,6 +56,7 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
 
 
 
