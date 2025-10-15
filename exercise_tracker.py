@@ -12,9 +12,7 @@ except FileNotFoundError:
 st.set_page_config(page_title="Exercise Tracker", layout="centered")
 
 
-col1, col2, col3 = st.columns([1, 6, 1])
-with col2:
-    st.markdown("### 🏋️ Exercise Tracker & Logger")
+st.markdown("### 🏋️ Exercise Tracker & Logger")
 
 
 
@@ -47,6 +45,7 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
 
 
 
