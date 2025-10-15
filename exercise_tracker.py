@@ -21,7 +21,7 @@ st.markdown("""
         }
         @media screen and (max-width: 480px) {
             .main-title {
-                font-size: 1.4rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -56,6 +56,7 @@ if st.button("Log Exercise"):
 
 st.subheader("📋 Exercise Log")
 st.dataframe(df)
+
 
 
 
